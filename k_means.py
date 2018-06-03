@@ -265,6 +265,7 @@ def main():
 	dataset = process_data(filename)
 	# find centroid by applying K - means
 	final_centroids = find_centroids(dataset, K)
+	pickle.dump(final_centroids, open("final_centroids_%s" % filename, 'wb'))
 
 	cont = True
 	while cont:
